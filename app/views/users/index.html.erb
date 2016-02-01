@@ -1,0 +1,43 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">Recent Task & Activity</h3>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <div class="table-responsive">
+      <div class="box">
+        <p id="notice"><%= notice %></p>
+        <h3 class="box-title">Task Lists</h3>
+      </div-->
+      <div class="box-body">
+        <!--Loop start here-->
+        <% @tasks.each do |task| %>
+        <div class="attachment-block clearfix">
+          <div class="attachment-pushed">
+            <h4 class="attachment-heading"></h4>
+            <div class="attachment-text" style="margin-top:10px">
+              <div class="comment-text" style="margin-top:10px">
+                <%= task.planned_hours %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <!--Loop end here-->
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer"></div>
+      <!-- /.box-footer-->
+    </div>
+  </div>
+  <!-- /.table-responsive -->
+</div>
+  <!-- /.box-body -->
+  <!--div class="box-footer clearfix">
+    <a href="javascript::;" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
+    <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+  </div-->
+  <!-- /.box-footer -->
+</div>
+
+<%= link_to 'New Task', new_task_path %> || <%= link_to 'New Activity', new_activity_path %>
