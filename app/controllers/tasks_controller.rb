@@ -10,12 +10,10 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
-    redirect_to 404_page if @task.blank?
   end
 
   def show
     @task = Task.find(params[:id])
-    redirect_to 404_page if @task.blank?
   end
 
   private
